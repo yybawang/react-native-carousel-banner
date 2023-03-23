@@ -1,6 +1,6 @@
 {
   "name": "react-native-carousel-banner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Image Carousel",
   "main": "index.js",
   "scripts": {
