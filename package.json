@@ -1,0 +1,26 @@
+{
+  "name": "react-native-carousel-banner",
+  "version": "1.0.0",
+  "description": "Image Carousel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yybawang/react-native-carousel-banner.git"
+  },
+  "keywords": [
+    "ReactNative",
+    "Image",
+    "Carousel",
+    "Swipper",
+    "Banner"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yybawang/react-native-carousel-banner/issues"
+  },
+  "homepage": "https://github.com/yybawang/react-native-carousel-banner#readme"
+}
