@@ -49,7 +49,7 @@ const DATA = [
 | `data` | string[]  | `[]` |  the item data  |
 | `height` | number  | `170` | `height` of image  |
 | `roundedSize` | number  | `0` | `borderRadius` of image  |
-| `autoplay` | boolean  | `false` | determine whether the auto play mode is enabled or not |
+| `autoplay` | boolean  | `true` | determine whether the auto play mode is enabled or not |
 | `autoplayInterval` | number  | `5000` | delay between item transitions in `milliseconds`  |
 | `dotColor` | string  | `#f97316` | index dot `backgroundColor`  |
 | `onChange` | function  | null | callback of index changed  |
