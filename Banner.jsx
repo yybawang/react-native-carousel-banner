@@ -1,11 +1,11 @@
 import React from 'react';
 import {FlatList, Image, useWindowDimensions, View} from 'react-native';
 
-const Banner = ({data, height = 170, roundedSize = 0, autoplay = true, autoplayInterval = 5000, index = 0, dotColor = '#f97316', onChange = null}) => {
+const Banner = ({data, height = 170, roundedSize = 0, autoplay = true, autoplayInterval = 5000, dotColor = '#f97316', onChange = null}) => {
   const [active, setActive] = React.useState(0);
   const {width} = useWindowDimensions();
   const dataRef = React.useRef(data);
-  const indexRef = React.useRef(index);
+  const indexRef = React.useRef(0);
   const listRef = React.useRef(null);
   const offsetRef = React.useRef(0);
   const intervalRef = React.useRef(0);
@@ -37,7 +37,7 @@ const Banner = ({data, height = 170, roundedSize = 0, autoplay = true, autoplayI
     }
     setActive(indexRef.current);
     listRef.current.scrollToIndex({index: indexRef.current, animated: true});
-    onChange && onChange(indexRef.current);
+    onChange && onChange(indexRef.current, data.length);
     autoPlay();
   }
 
@@ -53,7 +53,7 @@ const Banner = ({data, height = 170, roundedSize = 0, autoplay = true, autoplayI
       setActive(indexRef.current);
       if(dataRef.current.length > 0){
         listRef.current.scrollToIndex({index: indexRef.current, animated: true});
-        onChange && onChange(indexRef.current);
+        onChange && onChange(indexRef.current, dataRef.current.length);
       }
     }, autoplayInterval);
   }
