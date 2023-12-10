@@ -36,7 +36,11 @@ const Banner = ({data, height = 170, roundedSize = 0, autoplay = true, autoplayI
       indexRef.current = Math.max(0, data.length - 1);
     }
     setActive(indexRef.current);
-    listRef.current.scrollToIndex({index: indexRef.current, animated: true});
+    try{
+      listRef.current.scrollToIndex({index: indexRef.current, animated: true});
+    }catch(e){
+      
+    }
     onChange && onChange(indexRef.current, data.length);
     autoPlay();
   }
